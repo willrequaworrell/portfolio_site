@@ -19,7 +19,7 @@ const ContactSection = () => {
                         <input className="w-2/5 bg-[#F4FFF0] p-2 text-[#052B30]" type="text" placeholder="Name" />
                         <input className="w-2/5 bg-[#F4FFF0] p-2 text-[#052B30]" type="email" placeholder="Email" />
                     </div>
-                    <textarea placeholder="Ask me anything..." className="w-full bg-[#F4FFF0] p-2 text-[#052B30]" cols={30} rows={10}> </textarea>
+                    <textarea placeholder="Ask me anything..." className="w-full bg-[#F4FFF0] p-2 text-[#052B30]" cols={30} rows={10}/>
                     </div>
                     <div className="flex flex-col items-center justify-around border-[#F4FFF0] md:hidden md:border-r-4">
                     <div className="flex flex-wrap gap-x-4">
