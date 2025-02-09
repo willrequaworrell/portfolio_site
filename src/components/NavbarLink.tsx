@@ -1,8 +1,10 @@
+import { sectionType } from "../types/section"
+
 interface NavbarLinkPropsType {
     text: string
-    section: string
+    section: sectionType
     isActive?: boolean
-    scrollTo: (section: string) => void
+    scrollTo: (section: sectionType) => void
 }
 
 

@@ -1,0 +1,1 @@
+export type sectionType = "landing" | "about" | "projects" | "contact"
