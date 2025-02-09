@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 const LandingSection = () => {
 
-    const titleVariants = {
+    const titleContainerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -14,8 +14,24 @@ const LandingSection = () => {
         }
     };
 
-    const childVariants = {
-        hidden: { opacity: 0, y: 100 },
+    const nameVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.4,
+                ease: "easeOut",
+                damping: 10,
+                stiffness: 500,
+                staggerChildren: 0.3,
+                delayChildren: 0.4
+            }
+        }
+    };
+
+    const sweVariants = {
+        hidden: { opacity: 0, y: 25 },
         visible: {
             opacity: 1,
             y: 0,
@@ -26,7 +42,7 @@ const LandingSection = () => {
                 stiffness: 500
             }
         }
-    };
+    }
 
     return (
         <section id="landing" className="snap-start">
@@ -36,20 +52,20 @@ const LandingSection = () => {
                 <div className="relative z-10 flex min-h-screen overflow-clip flex-col leading-none">
 
                     <motion.div 
-                        variants={titleVariants}
+                        variants={titleContainerVariants}
                         initial={"hidden"}
                         animate={"visible"}
                         className="absolute bottom-0 left-0 mb-0 text-[#F4FFF0]"
                     >
                         <motion.div 
                             className="flex items-baseline md:-my-[4vh] lg:-my-[8vh]"
-                            variants={childVariants}
+                            variants={nameVariants}
                         >
-                            <p className="text-[max(22vw,100px)] ">Will</p>
-                            <p className="text-[max(4.5vw,20px)]">/Software Engineer</p>
+                            <motion.p className="text-[max(22vw,100px)] ">Will</motion.p>
+                            <motion.p variants={sweVariants} className="text-[max(4.5vw,20px)]">/Software Engineer</motion.p>
                         </motion.div>
                         <motion.p 
-                            variants={childVariants}
+                            variants={nameVariants}
                             className="text-[max(25vw,120px)] -my-[2vh] md:-my-[4vh] lg:-my-[5vh]"
                         >
                             Worrell
