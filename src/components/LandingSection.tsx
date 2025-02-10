@@ -15,10 +15,11 @@ const LandingSection = () => {
     };
 
     const nameVariants = {
-        hidden: { opacity: 0, y: 50 },
+        hidden: { opacity: 0, y: 50, filter: "blur(10px)" },
         visible: {
             opacity: 1,
             y: 0,
+            filter: "blur(0px)",
             transition: {
                 duration: 0.4,
                 ease: "easeOut",
@@ -31,10 +32,11 @@ const LandingSection = () => {
     };
 
     const sweVariants = {
-        hidden: { opacity: 0, y: 25 },
+        hidden: { opacity: 0, y: 25, filter: "blur(10px)" },
         visible: {
             opacity: 1,
             y: 0,
+            filter: "blur(0px)",
             transition: {
                 duration: 0.4,
                 ease: "easeOut",

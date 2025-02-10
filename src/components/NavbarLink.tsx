@@ -13,10 +13,11 @@ interface NavbarLinkPropsType {
 const NavbarLink = ({text, isActive, section, scrollTo, activeSection}: NavbarLinkPropsType) => {
     
     const childVariants = {
-        hidden: { opacity: 0, y: -20 },
+        hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
         visible: {
             opacity: 1,
             y: 0,
+            filter: "blur(0px)",
             transition: {
                 duration: 0.4,
                 ease: "easeOut",
