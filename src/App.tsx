@@ -52,7 +52,7 @@ function App() {
 	return (
 		<>
 			<Navbar scrollTo={scrollTo} activeSection={activeSection}/>
-			<div ref={scrollContainerRef} className="snap-y snap-mandatory overflow-y-scroll h-screen">
+			<div ref={scrollContainerRef} className="snap-y snap-mandatory overflow-y-scroll overflow-x-hidden h-screen">
 				<div ref={landingRef}>
 					<LandingSection />
 				</div>

@@ -6,7 +6,7 @@ const contentVariants = {
         opacity: 1,
         x: 0,
         transition: {
-            duration: 0.4,
+            duration: 0.8,
             ease: "easeOut",
             damping: 10,
             stiffness: 500
@@ -20,7 +20,7 @@ const aboutVariants = {
         opacity: 1,
         y: 0,
         transition: {
-            duration: 0.4,
+            duration: 0.8,
             ease: "easeOut",
             damping: 10,
             stiffness: 500
@@ -31,7 +31,7 @@ const aboutVariants = {
 const AboutSection = () => {
     return (
         <section id="about" className="snap-start snap-always">
-            <div className="flex min-h-screen p-8">
+            <div className="flex min-h-screen max-h-screen p-8">
                 <div className="flex flex-grow flex-col gap-x-8 md:flex-row">
                     <p className="text-end text-[16vw] text-[#F4FFF0] md:hidden">About</p>
                     <div className="flex h-full w-full items-center md:h-auto md:w-1/2">
