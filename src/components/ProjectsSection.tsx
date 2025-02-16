@@ -1,3 +1,4 @@
+import { Carousel } from "@material-tailwind/react"
 import { motion } from "framer-motion"
 
 const contentVariants = {
@@ -30,7 +31,7 @@ const aboutVariants = {
 
 const ProjectsSection = () => {
     return (
-        <section className="snap-start snap-always">
+        <section className="">
             <div className="flex min-h-screen max-h-screen p-8">
                 <div className="flex flex-grow flex-col gap-x-8 md:flex-row-reverse">
                     <p className="text-start text-[16vw] text-[#F4FFF0] md:hidden">Projects</p>
@@ -39,8 +40,26 @@ const ProjectsSection = () => {
                             variants={contentVariants}
                             initial={"hidden"}
                             whileInView={"visible"}
-                            className="h-full w-full bg-[#F4FFF0] md:h-2/3"
-                        />
+                            className="h-full w-full p-8 bg-[#F4FFF0] md:h-2/3"
+                        >
+                            <Carousel>
+                                <img
+                                    src="/klarr.png"
+                                    alt="image 1"
+                                    className="h-full w-full object-contain"
+                                />
+                                <img
+                                    src="/britespot.png"
+                                    alt="image 2"
+                                    className="h-full w-full object-contain"
+                                />
+                                <img
+                                    src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+                                    alt="image 3"
+                                    className="h-full w-full object-cover"
+                                />
+                            </Carousel>
+                        </motion.div>
                     </div>
                     <motion.div 
                         variants={aboutVariants}

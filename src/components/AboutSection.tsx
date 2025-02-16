@@ -30,7 +30,7 @@ const aboutVariants = {
 
 const AboutSection = () => {
     return (
-        <section id="about" className="snap-start snap-always">
+        <section id="about" className="">
             <div className="flex min-h-screen max-h-screen p-8">
                 <div className="flex flex-grow flex-col gap-x-8 md:flex-row">
                     <p className="text-end text-[16vw] text-[#F4FFF0] md:hidden">About</p>

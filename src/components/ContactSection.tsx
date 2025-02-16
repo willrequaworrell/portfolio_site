@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { FaLinkedin } from "react-icons/fa"
 
 const ContactSection = () => {
 
@@ -43,7 +44,7 @@ const ContactSection = () => {
 
 
     return (
-        <section className="snap-start snap-always" >
+        <section className="" >
             <div className="flex min-h-screen max-h-screen p-8 text-[#F4FFF0]">
                 <motion.div 
                     variants={containerVariants}
@@ -67,7 +68,8 @@ const ContactSection = () => {
                     >
                         <div className="hidden items-center justify-around border-[#F4FFF0] md:flex md:w-1/2 md:flex-col md:border-r-4">
                         <div className="flex flex-grow flex-col items-start justify-around">
-                            <p>LinkedIn - Will Worrell</p>
+
+                            <p><FaLinkedin className="inline" /> Will Worrell</p>
                             <p>GitHub - willrequaworrell</p>
                             <p>Email - willrequaworrell@gmail.com</p>
                             <p>Phone - (401)-578-9393</p>
