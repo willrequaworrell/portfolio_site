@@ -6,7 +6,7 @@ interface GradientContainerPropsType {
 
 const GradientContainer = ({children}: GradientContainerPropsType) => {
     return (
-        <div className=" bg-gradient-to-b from-[#052B30] via-[#093941] to-[#011f24]">
+        <div className="h-[400vh] bg-gradient-to-b from-[#052B30] via-[#093941] to-[#011f24]">
             {children}
         </div>
     )

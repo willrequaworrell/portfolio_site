@@ -31,7 +31,7 @@ const aboutVariants = {
 
 const ProjectsSection = () => {
     return (
-        <section className="">
+        <section className="bg-gradient-to-b from-[#093941] to-[#052b32]">
             <div className="flex min-h-screen max-h-screen p-8">
                 <div className="flex flex-grow flex-col gap-x-8 md:flex-row-reverse">
                     <p className="text-start text-[16vw] text-[#F4FFF0] md:hidden">Projects</p>

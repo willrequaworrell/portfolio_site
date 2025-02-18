@@ -44,7 +44,7 @@ const ContactSection = () => {
 
 
     return (
-        <section className="" >
+        <section className="bg-gradient-to-b from-[#052b32] to-[#011f24]" >
             <div className="flex min-h-screen max-h-screen p-8 text-[#F4FFF0]">
                 <motion.div 
                     variants={containerVariants}

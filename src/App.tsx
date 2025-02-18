@@ -2,73 +2,93 @@
 import { useEffect, useRef, useState } from "react"
 import AboutSection from "./components/AboutSection"
 import ContactSection from "./components/ContactSection"
-import GradientContainer from "./components/GradientContainer"
 import LandingSection from "./components/LandingSection"
 import ProjectsSection from "./components/ProjectsSection"
 import Navbar from "./components/Navbar"
 import { sectionType } from "./types/section"
+import { useInView } from "react-intersection-observer"
 
 function App() {
 	const [activeSection, setActiveSection] = useState<sectionType>("landing")
 	
-	const landingRef = useRef<HTMLDivElement>(null);
-	const aboutRef = useRef<HTMLDivElement>(null);
-	const projectsRef = useRef<HTMLDivElement>(null);
-	const contactRef = useRef<HTMLDivElement>(null);
+	const landingElementRef = useRef<HTMLDivElement | null>(null);
+	const aboutElementRef = useRef<HTMLDivElement | null>(null);
+	const projectsElementRef = useRef<HTMLDivElement | null>(null);
+	const contactElementRef = useRef<HTMLDivElement | null>(null);
+
 	const scrollContainerRef = useRef<HTMLDivElement>(null);
 
 
-	const scrollTo = (section: sectionType) => {
-		const refs: { [key: string]: React.RefObject<HTMLDivElement> } = {
-			landing: landingRef,
-			about: aboutRef,
-			projects: projectsRef,
-			contact: contactRef
-		};
-		refs[section].current?.scrollIntoView({ behavior: 'smooth' });
+	const sectionOptions = {
+		threshold: 0.5,
+		rootMargin: "0px 0px -50% 0px"
 	};
 
-	useEffect(() => {
-		const container = scrollContainerRef.current;
-    	if (!container) return
-		const handleScroll = () => {
-			const scrollPosition = container.scrollTop + container.clientHeight/2
-			if (scrollPosition < aboutRef.current?.offsetTop!) {
-				setActiveSection("landing");
-			} else if (scrollPosition < projectsRef.current?.offsetTop!) {
-				setActiveSection("about");
-			} else if (scrollPosition < contactRef.current?.offsetTop!) {
-				setActiveSection("projects");
-			} else {
-				setActiveSection("contact");
-			}
+	const { ref: landingInViewRef, inView: landingInView } = useInView(sectionOptions);
+	const { ref: aboutInViewRef, inView: aboutInView } = useInView(sectionOptions);
+	const { ref: projectsInViewRef, inView: projectsInView } = useInView(sectionOptions);
+	const { ref: contactInViewRef, inView: contactInView } = useInView(sectionOptions);
 
-			
-		}
-		container.addEventListener("scroll", handleScroll);
-		return () => container.removeEventListener("scroll", handleScroll)
-	} ,[])
+
+	const landingRef = (node: HTMLDivElement | null) => {
+		landingElementRef.current = node;
+		landingInViewRef(node);
+	  };
+	
+	  const aboutRef = (node: HTMLDivElement | null) => {
+		aboutElementRef.current = node;
+		aboutInViewRef(node);
+	  };
+	
+	  const projectsRef = (node: HTMLDivElement | null) => {
+		projectsElementRef.current = node;
+		projectsInViewRef(node);
+	  };
+	
+	  const contactRef = (node: HTMLDivElement | null) => {
+		contactElementRef.current = node;
+		contactInViewRef(node);
+	  };
+
+	useEffect(() => {
+		if (contactInView) setActiveSection("contact");
+		else if (projectsInView) setActiveSection("projects");
+		else if (aboutInView) setActiveSection("about");
+		else if (landingInView) setActiveSection("landing");
+	}, [landingInView, aboutInView, projectsInView, contactInView]);
+
+
+	const scrollTo = (section: sectionType) => {
+		const refs: { [key: string]: HTMLDivElement | null } = {
+		  landing: landingElementRef.current,
+		  about: aboutElementRef.current,
+		  projects: projectsElementRef.current,
+		  contact: contactElementRef.current,
+		};
+	
+		refs[section]?.scrollIntoView({ behavior: "smooth", block: "start" });
+	  };
+
+
 
 	return (
-		<>
+		<main>
 			<Navbar scrollTo={scrollTo} activeSection={activeSection}/>
-			<div ref={scrollContainerRef} className="snap-y overflow-y-scroll overflow-x-hidden h-screen">
+			<div ref={scrollContainerRef}>
 				<div ref={landingRef}>
 					<LandingSection />
 				</div>
-				<GradientContainer >
-					<div ref={aboutRef}>
-						<AboutSection />
-					</div>
-					<div ref={projectsRef}>
-						<ProjectsSection />
-					</div>
-					<div ref={contactRef}>
-						<ContactSection />
-					</div>
-				</GradientContainer>
+				<div ref={aboutRef}>
+					<AboutSection />
+				</div>
+				<div ref={projectsRef}>
+					<ProjectsSection />
+				</div>
+				<div ref={contactRef}>
+					<ContactSection />
+				</div>
 			</div>
-		</>
+		</main>
 	)
 }
 
