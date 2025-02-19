@@ -44,19 +44,21 @@ const ContactSection = () => {
 
 
     return (
-        <section className="bg-gradient-to-b from-[#052b32] to-[#011f24]" >
+        <section className="font-ibm bg-gradient-to-b from-[#052b32] to-[#011f24]" >
             <div className="flex min-h-screen max-h-screen p-8 text-[#F4FFF0]">
                 <motion.div 
                     variants={containerVariants}
                     initial={"hidden"}
                     whileInView={"visible"}
+                    viewport={{ once: true }}
                     className="flex flex-grow flex-col items-center justify-center"
                 >
                     <motion.p 
                         variants={contactVariants}
                         initial={"hidden"}
                         whileInView={"visible"}
-                        className="text-[12vw]"
+                        viewport={{ once: true }}
+                        className="text-[7vw] font-climate"
                     >
                         Contact
                     </motion.p>
@@ -64,6 +66,7 @@ const ContactSection = () => {
                         variants={contentVariants}
                         initial={"hidden"}
                         whileInView={"visible"}
+                        viewport={{ once: true }}
                         className="flex w-full flex-grow flex-col p-2 md:flex-row md:p-8"
                     >
                         <div className="hidden items-center justify-around border-[#F4FFF0] md:flex md:w-1/2 md:flex-col md:border-r-4">

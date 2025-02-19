@@ -1,2 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+    --font-reddit: "Reddit Mono", serif;
+    --font-climate: "Climate Crisis", serif;
+    --font-ibm: "IBM Plex Mono", serif;
+}
+
+html,
+body {
+  overscroll-behavior: none;
+}

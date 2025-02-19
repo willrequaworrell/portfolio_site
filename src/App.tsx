@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react"
 import AboutSection from "./components/AboutSection"
 import ContactSection from "./components/ContactSection"
@@ -6,7 +5,9 @@ import LandingSection from "./components/LandingSection"
 import ProjectsSection from "./components/ProjectsSection"
 import Navbar from "./components/Navbar"
 import { sectionType } from "./types/section"
+
 import { useInView } from "react-intersection-observer"
+import Lenis from "lenis"
 
 function App() {
 	const [activeSection, setActiveSection] = useState<sectionType>("landing")
@@ -15,7 +16,6 @@ function App() {
 	const aboutElementRef = useRef<HTMLDivElement | null>(null);
 	const projectsElementRef = useRef<HTMLDivElement | null>(null);
 	const contactElementRef = useRef<HTMLDivElement | null>(null);
-
 	const scrollContainerRef = useRef<HTMLDivElement>(null);
 
 
@@ -28,6 +28,7 @@ function App() {
 	const { ref: aboutInViewRef, inView: aboutInView } = useInView(sectionOptions);
 	const { ref: projectsInViewRef, inView: projectsInView } = useInView(sectionOptions);
 	const { ref: contactInViewRef, inView: contactInView } = useInView(sectionOptions);
+
 
 
 	const landingRef = (node: HTMLDivElement | null) => {
@@ -50,6 +51,20 @@ function App() {
 		contactInViewRef(node);
 	  };
 
+
+	  
+	const scrollTo = (section: sectionType) => {
+		const refs: { [key: string]: HTMLDivElement | null } = {
+			landing: landingElementRef.current,
+			about: aboutElementRef.current,
+			projects: projectsElementRef.current,
+			contact: contactElementRef.current,
+		};
+
+		refs[section]?.scrollIntoView({ behavior: "smooth", block: "start" });
+	};
+
+		
 	useEffect(() => {
 		if (contactInView) setActiveSection("contact");
 		else if (projectsInView) setActiveSection("projects");
@@ -57,24 +72,26 @@ function App() {
 		else if (landingInView) setActiveSection("landing");
 	}, [landingInView, aboutInView, projectsInView, contactInView]);
 
+	useEffect(() => {
+		const lenis = new Lenis({
+			// lerp: 0.06,
+			duration: 1.5,
+			// smoothWheel: true,
+			// easing: (t) => 1 - Math.pow(1 - t, 6)
+			easing: (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t)
 
-	const scrollTo = (section: sectionType) => {
-		const refs: { [key: string]: HTMLDivElement | null } = {
-		  landing: landingElementRef.current,
-		  about: aboutElementRef.current,
-		  projects: projectsElementRef.current,
-		  contact: contactElementRef.current,
-		};
-	
-		refs[section]?.scrollIntoView({ behavior: "smooth", block: "start" });
-	  };
-
-
-
+		})
+		function raf(time: any) {
+			lenis.raf(time)
+			requestAnimationFrame(raf)
+		}
+		requestAnimationFrame(raf)
+	}, [])
+		
 	return (
 		<main>
 			<Navbar scrollTo={scrollTo} activeSection={activeSection}/>
-			<div ref={scrollContainerRef}>
+			<div ref={scrollContainerRef} >
 				<div ref={landingRef}>
 					<LandingSection />
 				</div>

@@ -60,17 +60,17 @@ const LandingSection = () => {
                         className="absolute bottom-0 left-0 mb-0 text-[#F4FFF0]"
                     >
                         <motion.div 
-                            className="flex items-baseline md:-my-[4vh] lg:-my-[8vh]"
+                            className="flex items-baseline md:-my-[4vh] lg:-my-[4vh]"
                             variants={nameVariants}
                         >
-                            <motion.p className="text-[max(22vw,100px)] ">Will</motion.p>
-                            <motion.p variants={sweVariants} className="text-[max(4.5vw,20px)]">/Software Engineer</motion.p>
+                            <motion.p className="text-[max(14vw,100px)] font-climate">WILL</motion.p>
+                            <motion.p variants={sweVariants} className="text-[max(3.75vw,20px)] font-ibm italic"> //Software Engineer</motion.p>
                         </motion.div>
                         <motion.p 
                             variants={nameVariants}
-                            className="text-[max(25vw,120px)] -my-[2vh] md:-my-[4vh] lg:-my-[5vh]"
+                            className="font-climate text-[max(14vw,120px)] -my-[2vh] md:-my-[4vh] lg:-my-[2vh]"
                         >
-                            Worrell
+                            WORRELL
                         </motion.p>
                     </motion.div>
                 </div>
