@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import AboutSection from "./components/AboutSection"
-import ContactSection from "./components/ContactSection"
+import ContactSection from "./components/ContactSection/ContactSection"
 import LandingSection from "./components/LandingSection"
 import ProjectsSection from "./components/ProjectsSection"
 import Navbar from "./components/Navbar"
@@ -74,9 +74,9 @@ function App() {
 
 	useEffect(() => {
 		const lenis = new Lenis({
-			// lerp: 0.06,
-			duration: 1.5,
-			// smoothWheel: true,
+			lerp: 0.05,
+			// duration: 1.5,
+			smoothWheel: true,
 			// easing: (t) => 1 - Math.pow(1 - t, 6)
 			easing: (t) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t)
 

@@ -1,7 +1,14 @@
 import { motion } from "framer-motion"
-import { FaLinkedin } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaPhoneSquare } from "react-icons/fa"
+import ContactForm from "./ContactForm";
+import SocialLink from "./SocialLink";
+import { MdOutlineMailOutline } from "react-icons/md";
 
 const ContactSection = () => {
+
+    
+
+    
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -70,23 +77,33 @@ const ContactSection = () => {
                         className="flex w-full flex-grow flex-col p-2 md:flex-row md:p-8"
                     >
                         <div className="hidden items-center justify-around border-[#F4FFF0] md:flex md:w-1/2 md:flex-col md:border-r-4">
-                        <div className="flex flex-grow flex-col items-start justify-around">
+                            <div className="flex flex-grow flex-col items-start justify-around">
 
-                            <p><FaLinkedin className="inline" /> Will Worrell</p>
-                            <p>GitHub - willrequaworrell</p>
-                            <p>Email - willrequaworrell@gmail.com</p>
-                            <p>Phone - (401)-578-9393</p>
+                                {/* <a href="https://linkedin.com/in/wrw" target="_blank"><FaLinkedin className="inline" />LinkedIn - Will Worrell</a> */}
+                                <SocialLink
+                                    text="Linkedin - Will Worrell"
+                                    icon={<FaLinkedin />}
+                                    href="https://linkedin.com/in/wrw"
+                                />
+                                <SocialLink
+                                    text="Github - willrequaworrell"
+                                    icon={<FaGithub />}
+                                    href="https://linkedin.com/in/wrw"
+                                />
+                                <SocialLink
+                                    text="Email - willrequaworrell@gmail.com"
+                                    icon={<MdOutlineMailOutline />}
+                                    href="mailto:willrequaworrell@gmail.com"
+                                />
+                                <SocialLink
+                                    text="Mobile - (401)-578-9393"
+                                    icon={<FaPhoneSquare />}
+                                    href=""
+                                />
+                                
+                            </div>
                         </div>
-                        </div>
-                        <form className="flex flex-col items-center justify-center gap-y-8 border-[#F4FFF0] pb-8 md:w-1/2 md:border-l-4 md:p-8 md:pt-8">
-                                <p className="text-[2vw]">Ask me anything!</p>
-                                <div className="flex w-full items-center justify-between">
-                                    <input className="w-2/5 bg-[#F4FFF0] p-2 text-slate-600" type="text" placeholder="Name" />
-                                    <input className="w-2/5 bg-[#F4FFF0] p-2 text-slate-600" type="email" placeholder="Email" />
-                                </div>
-                                <textarea placeholder="Message..." className="w-full bg-[#F4FFF0] p-2 text-slate-600" cols={30} rows={10}/>
-                                <button>Send</button>
-                        </form>
+                        <ContactForm/>
                         {/* Mobile contact form */}
                         <div className="flex flex-col items-center justify-around border-[#F4FFF0] md:hidden md:border-r-4">
                             <div className="flex flex-wrap gap-x-4">
