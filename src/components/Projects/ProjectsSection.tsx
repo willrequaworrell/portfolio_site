@@ -1,5 +1,7 @@
-import { Carousel } from "@material-tailwind/react"
+// import { Carousel } from "@material-tailwind/react"
 import { motion } from "framer-motion"
+import Carousel from "./Carousel"
+import { useState } from "react"
 
 const contentVariants = {
     hidden: { opacity: 0, x: 250 },
@@ -30,6 +32,9 @@ const projectsVariants = {
 }
 
 const ProjectsSection = () => {
+
+    const [currentProject, setCurrentProject] = useState<number>(0)
+
     return (
         <section className="font-ibm bg-gradient-to-b from-[#093941] to-[#052b32] overflow-x-clip">
             <div className="flex min-h-screen max-h-screen p-8">
@@ -41,13 +46,20 @@ const ProjectsSection = () => {
                             initial={"hidden"}
                             whileInView={"visible"}
                             viewport={{ once: true }}
-                            className="h-full w-full p-8 bg-[#F4FFF0] md:h-2/3"
+                            className="h-full w-full p-8 rounded-xl bg-[#F4FFF0] md:h-2/3"
                         >
-                            <Carousel>
+                            <Carousel 
+                                currentSlide={currentProject}
+                                setCurrentSlide={setCurrentProject}
+                                slides={[
+                                {src: "./klarr.png", alt: "klarr app logo"},
+                                {src: "./britespot.png", alt: "klarr app logo"}
+                            ]} />
+                            {/* <Carousel className="rounded-xl">
                                 <img
                                     src="/klarr.png"
                                     alt="image 1"
-                                    className="h-full w-full object-contain"
+                                    className="h-full w-full object-scale-down"
                                 />
                                 <img
                                     src="/britespot.png"
@@ -59,7 +71,7 @@ const ProjectsSection = () => {
                                     alt="image 3"
                                     className="h-full w-full object-cover"
                                 />
-                            </Carousel>
+                            </Carousel> */}
                         </motion.div>
                     </div>
                     <motion.div 

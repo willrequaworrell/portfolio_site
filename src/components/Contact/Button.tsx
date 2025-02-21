@@ -23,7 +23,7 @@ const Button = ({isLoading, isSuccess}:ButtonPropsType) => {
             type="submit" 
             value="Send"
             disabled={isSuccess}
-            className="text-[#F4FFF0] border-[#F4FFF0] border-2 px-8 py-2 rounded-lg cursor-pointer hover:text-slate-600 hover:bg-[#F4FFF0] disabled:border-slate-600 disabled:text-slate-600 disabled:cursor-not-allowed transition-all ease-in-out" 
+            className="text-[#F4FFF0] border-[#F4FFF0] border-2 px-8 py-2 rounded-xl cursor-pointer hover:text-slate-600 hover:bg-[#F4FFF0] disabled:border-slate-600 disabled:text-slate-600 disabled:cursor-not-allowed transition-all ease-in-out" 
         >
             <div className="flex items-center justify-center gap-x-1">
                 <p>Send</p>

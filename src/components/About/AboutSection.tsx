@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { useState } from "react"
 
 const contentVariants = {
     hidden: { opacity: 0, x: -250 },
@@ -29,6 +30,9 @@ const aboutVariants = {
 }
 
 const AboutSection = () => {
+
+    const [showResume, setShowResume] = useState<boolean>(false)
+
     return (
         <section id="about" className="font-ibm bg-gradient-to-b from-[#052B30] to-[#093941]">
             <div className="flex min-h-screen max-h-screen p-8">
@@ -40,13 +44,24 @@ const AboutSection = () => {
                             initial={"hidden"}
                             whileInView={"visible"}
                             viewport={{ once: true }}
-                            className="h-full w-full bg-[#F4FFF0] md:h-2/3 flex justify-center items-center"
+                            className="h-full w-full bg-[#F4FFF0] md:h-2/3 flex justify-center items-center rounded-xl"
                         >
-                            <iframe
-                                src="/resume.pdf#navpanes=0"
-                                width="90%"
-                                height="90%"
-                            />
+                            {showResume ? (
+                                <iframe
+                                    src="/resume.pdf#navpanes=0"
+                                    width="90%"
+                                    height="90%"
+                                />
+                            ) : (
+                                <div 
+                                    onClick={() => setShowResume(true)}
+                                    className="flex flex-col"
+                                >
+                                    <p>Click</p>
+                                    <p>for</p>
+                                    <p>Resumé</p>
+                                </div>
+                            )}
                         </motion.div>
                     </div>
                     <motion.div 
