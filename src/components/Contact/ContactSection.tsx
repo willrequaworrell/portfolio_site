@@ -4,11 +4,9 @@ import ContactForm from "./ContactForm";
 import SocialLink from "./SocialLink";
 import { MdOutlineMailOutline } from "react-icons/md";
 
+
 const ContactSection = () => {
 
-    
-
-    
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -53,6 +51,7 @@ const ContactSection = () => {
     return (
         <section className="font-ibm bg-gradient-to-b from-[#052b32] to-[#011f24]" >
             <div className="flex min-h-screen max-h-screen p-8 text-[#F4FFF0]">
+                
                 <motion.div 
                     variants={containerVariants}
                     initial={"hidden"}
@@ -79,16 +78,17 @@ const ContactSection = () => {
                         <div className="hidden items-center justify-around border-[#F4FFF0] md:flex md:w-1/2 md:flex-col md:border-r-4">
                             <div className="flex flex-grow flex-col items-start justify-around">
 
-                                {/* <a href="https://linkedin.com/in/wrw" target="_blank"><FaLinkedin className="inline" />LinkedIn - Will Worrell</a> */}
                                 <SocialLink
                                     text="Linkedin - Will Worrell"
                                     icon={<FaLinkedin />}
                                     href="https://linkedin.com/in/wrw"
+                                    openInNewTab
                                 />
                                 <SocialLink
                                     text="Github - willrequaworrell"
                                     icon={<FaGithub />}
-                                    href="https://linkedin.com/in/wrw"
+                                    href="https://github.com/willrequaworrell"
+                                    openInNewTab
                                 />
                                 <SocialLink
                                     text="Email - willrequaworrell@gmail.com"
@@ -98,7 +98,7 @@ const ContactSection = () => {
                                 <SocialLink
                                     text="Mobile - (401)-578-9393"
                                     icon={<FaPhoneSquare />}
-                                    href=""
+                                    href="sms:+14015789393"
                                 />
                                 
                             </div>

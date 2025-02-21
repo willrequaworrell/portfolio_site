@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react"
-import AboutSection from "./components/AboutSection"
-import ContactSection from "./components/ContactSection/ContactSection"
-import LandingSection from "./components/LandingSection"
-import ProjectsSection from "./components/ProjectsSection"
+import AboutSection from "./components/About/AboutSection"
+import ContactSection from "./components/Contact/ContactSection"
+import LandingSection from "./components/Home/LandingSection"
+import ProjectsSection from "./components/Projects/ProjectsSection"
 import Navbar from "./components/Navbar"
 import { sectionType } from "./types/section"
 

@@ -40,8 +40,14 @@ const AboutSection = () => {
                             initial={"hidden"}
                             whileInView={"visible"}
                             viewport={{ once: true }}
-                            className="h-full w-full bg-[#F4FFF0] md:h-2/3"
-                        />
+                            className="h-full w-full bg-[#F4FFF0] md:h-2/3 flex justify-center items-center"
+                        >
+                            <iframe
+                                src="/resume.pdf#navpanes=0"
+                                width="90%"
+                                height="90%"
+                            />
+                        </motion.div>
                     </div>
                     <motion.div 
                         variants={aboutVariants}
