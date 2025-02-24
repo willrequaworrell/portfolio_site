@@ -17,15 +17,17 @@ interface CarouselPropsType {
 const Carousel = ({slides, currentSlide, setCurrentSlide}: CarouselPropsType) => {
     
     const [showSlideLinks, setShowSlideLinks] = useState<boolean>(false)
-
+    const numSlides = slides.length
+    
     const handlePrev = () => {
-        if (currentSlide <= 0) return
-        setCurrentSlide(prev => prev - 1)
+        if (currentSlide === 0) {
+
+        }
+        setCurrentSlide(prev => ((prev - 1) + numSlides) % numSlides)
     }
 
     const handleNext = () => {
-        if (currentSlide >= slides.length-1) return
-        setCurrentSlide(prev => prev + 1)
+        setCurrentSlide(prev => (prev + 1) % numSlides)
     }
 
 
@@ -69,8 +71,9 @@ const Carousel = ({slides, currentSlide, setCurrentSlide}: CarouselPropsType) =>
                     </>
                 }
             </div>
-            <div className="flex gap-x-8 text-[4vh] text-[#093941]">
+            <div className="flex gap-x-8 items-center text-[3vh] text-[#093941]">
                 <button className="hover:text-slate-600" onClick={handlePrev}><FaCircleLeft /></button>
+                <p className="text-[1vw]">{currentSlide + 1} / {slides.length}</p>
                 <button className="hover:text-slate-600" onClick={handleNext}><FaCircleRight /></button>
             </div>
            
