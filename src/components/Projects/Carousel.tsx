@@ -4,7 +4,14 @@ import {  FaCircleLeft, FaCircleRight } from "react-icons/fa6";
 interface CarouselPropsType {
     currentSlide: number
     setCurrentSlide: React.Dispatch<React.SetStateAction<number>>
-    slides: {src: string, alt: string}[]
+    slides: {
+        title:string, 
+        description: string, 
+        src: string, 
+        alt: string, 
+        live: string, 
+        github: string 
+    }[]
 }
 
 const Carousel = ({slides, currentSlide, setCurrentSlide}: CarouselPropsType) => {
@@ -37,12 +44,28 @@ const Carousel = ({slides, currentSlide, setCurrentSlide}: CarouselPropsType) =>
                 />
                 {showSlideLinks &&
                     <>
-                        <div className="absolute flex justify-center items-center w-1/2 h-full left-0 bg-slate-600/40 hover:bg-slate-600/50 text-[#F4FFF0] rounded-l-xl cursor-pointer">
-                            <a className="hover:underline oaacity-100 ">Live Site</a>
-                        </div>
-                        <div className="absolute flex justify-center items-center w-1/2 h-full right-0 bg-slate-600/40 hover:bg-slate-600/50 text-[#F4FFF0] rounded-r-xl cursor-pointer">
-                            <a className="hover:underline opacity-100">Github Repo</a>
-                        </div>
+                        <a 
+                            href={slides[currentSlide].live}
+                            target="_blank"    
+                            className="absolute flex justify-center items-center w-1/2 h-full left-0 bg-slate-600/40 hover:bg-slate-600/50 text-[#F4FFF0] rounded-l-xl cursor-pointer"
+                        >
+                            <p 
+                                className="hover:underline"
+                            >
+                                Live Site
+                            </p>
+                        </a>
+                        <a 
+                            href={slides[currentSlide].github}
+                            target="_blank"
+                            className="absolute flex justify-center items-center w-1/2 h-full right-0 bg-slate-600/40 hover:bg-slate-600/50 text-[#F4FFF0] rounded-r-xl cursor-pointer"
+                        >
+                            <p 
+                                className="hover:underline opacity-100"
+                            >
+                                Github Repo
+                            </p>
+                        </a>
                     </>
                 }
             </div>

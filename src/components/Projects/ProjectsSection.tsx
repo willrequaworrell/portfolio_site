@@ -2,6 +2,7 @@
 import { motion } from "framer-motion"
 import Carousel from "./Carousel"
 import { useState } from "react"
+import { projectsData } from "../../util/ProjectsData"
 
 const contentVariants = {
     hidden: { opacity: 0, x: 250 },
@@ -51,27 +52,7 @@ const ProjectsSection = () => {
                             <Carousel 
                                 currentSlide={currentProject}
                                 setCurrentSlide={setCurrentProject}
-                                slides={[
-                                {src: "./klarr.png", alt: "klarr app logo"},
-                                {src: "./britespot.png", alt: "klarr app logo"}
-                            ]} />
-                            {/* <Carousel className="rounded-xl">
-                                <img
-                                    src="/klarr.png"
-                                    alt="image 1"
-                                    className="h-full w-full object-scale-down"
-                                />
-                                <img
-                                    src="/britespot.png"
-                                    alt="image 2"
-                                    className="h-full w-full object-contain"
-                                />
-                                <img
-                                    src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-                                    alt="image 3"
-                                    className="h-full w-full object-cover"
-                                />
-                            </Carousel> */}
+                                slides={projectsData} />
                         </motion.div>
                     </div>
                     <motion.div 
@@ -81,9 +62,14 @@ const ProjectsSection = () => {
                         viewport={{ once: true }}
                         className="flex md:w-1/2"
                     >
-                        <div className="flex w-full flex-col items-start justify-center text-[#F4FFF0]">
-                            <p className="hidden text-[7vw] md:block font-climate">Projects</p>
-                            <p>This is a description of the currently selected project. It keeps going becuase this is about how long it might be if I actually had a description that was legitimate, and not just a random string of thoughts and words put together to look like a paragraph.</p>
+                        <div className="flex w-full flex-col items-start text-[#F4FFF0]">
+                            <div className="flex items-end h-2/5">
+                                <p className="hidden text-[7vw] md:block font-climate">Projects</p>
+                            </div>
+                            <div>
+                                <p className="text-[1.5vw] font-bold">{projectsData[currentProject].title}</p>
+                                <p>{projectsData[currentProject].description}</p>
+                            </div>
                         </div>
                     </motion.div>
                 </div>
