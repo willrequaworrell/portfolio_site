@@ -64,6 +64,9 @@ function App() {
 		refs[section]?.scrollIntoView({ behavior: "smooth", block: "start" });
 	};
 
+	useEffect(() => {
+		landingElementRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+	} , [])
 		
 	useEffect(() => {
 		if (contactInView) setActiveSection("contact");
