@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import {  FaCircleLeft, FaCircleRight } from "react-icons/fa6";
+import SlideLink from "./SlideLink";
 
 interface CarouselPropsType {
     currentSlide: number
@@ -16,17 +18,39 @@ interface CarouselPropsType {
 
 const Carousel = ({slides, currentSlide, setCurrentSlide}: CarouselPropsType) => {
     
+    const [direction, setDirection] = useState<"left" | "right">("right")
     const [showSlideLinks, setShowSlideLinks] = useState<boolean>(false)
     const numSlides = slides.length
     
-    const handlePrev = () => {
-        if (currentSlide === 0) {
+    const variants = {
+        initial: (direction: string) => ({
+          x: direction === "right" ? 300 : -300,
+          opacity: 0,
+        }),
+        animate: {
+          x: 0,
+          opacity: 1,
+          transition: { duration: 0.5 },
+        },
+        exit: (direction: string) => ({
+          x: direction === "right" ? -300 : 300,
+          opacity: 0,
+          transition: { duration: 0.5 },
+        }),
+      };
+      
 
-        }
+
+    const handlePrev = () => {
+        setDirection("left")
+        // if (currentSlide === 0) {
+
+        // }
         setCurrentSlide(prev => ((prev - 1) + numSlides) % numSlides)
     }
 
     const handleNext = () => {
+        setDirection("right")
         setCurrentSlide(prev => (prev + 1) % numSlides)
     }
 
@@ -37,37 +61,25 @@ const Carousel = ({slides, currentSlide, setCurrentSlide}: CarouselPropsType) =>
             <div 
                 onMouseEnter={() => setShowSlideLinks(true)}
                 onMouseLeave={() => setShowSlideLinks(false)}
-                className="relative flex flex-grow justify-center items-center  rounded-xl"
+                className="relative flex flex-grow justify-center items-center  rounded-xl overflow-clip"
             >
-                <img 
-                    src={slides[currentSlide].src} 
-                    alt={slides[currentSlide].alt} 
-                    className={`${showSlideLinks && "blur-xs"}`}
-                />
+                <AnimatePresence mode="wait" custom={direction}>
+                    <motion.img 
+                        src={slides[currentSlide].src} 
+                        alt={slides[currentSlide].alt} 
+                        custom={direction}
+                        key={currentSlide}
+                        variants={variants}
+                        initial="initial"
+                        animate="animate"
+                        exit="exit"
+                        className={`${showSlideLinks && "blur-xs"}`}
+                    />
+                </AnimatePresence>
                 {showSlideLinks &&
                     <>
-                        <a 
-                            href={slides[currentSlide].live}
-                            target="_blank"    
-                            className="absolute flex justify-center items-center w-1/2 h-full left-0 bg-slate-600/40 hover:bg-slate-600/50 text-[#F4FFF0] rounded-l-xl cursor-pointer"
-                        >
-                            <p 
-                                className="hover:underline"
-                            >
-                                Live Site
-                            </p>
-                        </a>
-                        <a 
-                            href={slides[currentSlide].github}
-                            target="_blank"
-                            className="absolute flex justify-center items-center w-1/2 h-full right-0 bg-slate-600/40 hover:bg-slate-600/50 text-[#F4FFF0] rounded-r-xl cursor-pointer"
-                        >
-                            <p 
-                                className="hover:underline opacity-100"
-                            >
-                                Github Repo
-                            </p>
-                        </a>
+                        <SlideLink type="live" href={slides[currentSlide].live}/>
+                        <SlideLink type="github" href={slides[currentSlide].github}/>
                     </>
                 }
             </div>

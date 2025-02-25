@@ -1,5 +1,7 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { TbHandClick } from "react-icons/tb";
+
 
 const contentVariants = {
     hidden: { opacity: 0, x: -250 },
@@ -55,11 +57,19 @@ const AboutSection = () => {
                             ) : (
                                 <div 
                                     onClick={() => setShowResume(true)}
-                                    className="flex flex-col"
+                                    className="flex justify-start items-center flex-grow font-climate text-[#093941] h-full p-8"
                                 >
-                                    <p>Click</p>
-                                    <p>for</p>
-                                    <p>Resumé</p>
+                                    {/* <div className="flex flex-col justify-center h-full text-[4vw]">
+                                        <p>Click</p>
+                                        <p>for</p>
+                                        <p>Resumé </p>
+                                    </div> */}
+                                    <div className="flex flex-col h-full flex-grow justify-center items-center w-1/3 text-[32vw]">
+                                        <TbHandClick/>
+                                        <p className="text-[2vw] font-climate">Click for Resumé</p>
+                                    </div>
+                                    
+                                    
                                 </div>
                             )}
                         </motion.div>
