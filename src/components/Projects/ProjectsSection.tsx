@@ -32,6 +32,7 @@ const projectsVariants = {
     }
 }
 
+
 const ProjectsSection = () => {
 
     const [currentProject, setCurrentProject] = useState<number>(0)
@@ -66,10 +67,10 @@ const ProjectsSection = () => {
                             <div className="flex items-end h-2/5">
                                 <p className="hidden text-[7vw] md:block font-climate">Projects</p>
                             </div>
-                            <div>
+                            <motion.div>
                                 <p className="text-[1.5vw] font-bold">{projectsData[currentProject].title}</p>
                                 <p>{projectsData[currentProject].description}</p>
-                            </div>
+                            </motion.div>
                         </div>
                     </motion.div>
                 </div>

@@ -64,10 +64,10 @@ const ContactForm = () => {
                 <form 
                     ref={form} 
                     onSubmit={handleSubmit}
-                    className="flex flex-col items-center justify-center gap-y-8 border-[#F4FFF0] pb-8 md:w-1/2 md:border-l-4 md:p-8 md:pt-8"
+                    className="flex flex-col items-center justify-center gap-y-8 border-[#F4FFF0] pb-8 w-full md:w-1/2 md:border-l-4 md:p-8 md:pt-8"
                 >
                         <p className="text-[2vw]">Ask me anything!</p>
-                        <div className="flex w-full items-center justify-between">
+                        <div className="flex w-full items-center justify-between gap-x-4">
                             <Input
                                 label="Name:"
                                 type="text"
