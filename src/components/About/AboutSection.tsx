@@ -38,9 +38,9 @@ const AboutSection = () => {
     return (
         <section id="about" className="font-ibm bg-gradient-to-b from-[#052B30] to-[#093941]">
             <div className="flex min-h-screen max-h-screen p-8">
-                <div className="flex flex-grow flex-col gap-x-8 md:flex-row">
+                <div className="flex flex-grow flex-col justify-center gap-x-8 md:flex-row">
                     <p className="text-end text-[10vw] font-climate text-[#F4FFF0] md:hidden">About</p>
-                    <div className="w-full h-full flex items-center max-h-1/2 min-h-1/3 md:max-h-none md:h-auto md:w-1/2">
+                    <div className="w-full h-full flex items-center max-h-1/2 min-h-1/3 md:max-h-none md:w-1/2">
                         <motion.div 
                             variants={contentVariants}
                             initial={"hidden"}

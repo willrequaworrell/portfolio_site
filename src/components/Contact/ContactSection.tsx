@@ -50,21 +50,21 @@ const ContactSection = () => {
 
     return (
         <section className="font-ibm bg-gradient-to-b from-[#052b32] to-[#011f24]" >
-            <div className="flex min-h-screen max-h-screen p-8 text-[#F4FFF0]">
+            <div className="flex items-center min-h-screen max-h-screen p-8 text-[#F4FFF0]">
                 
                 <motion.div 
                     variants={containerVariants}
                     initial={"hidden"}
                     whileInView={"visible"}
                     viewport={{ once: true }}
-                    className="flex flex-grow flex-col items-center justify-center"
+                    className="flex flex-grow flex-col items-center justify-center gap-y-4"
                 >
                     <motion.p 
                         variants={contactVariants}
                         initial={"hidden"}
                         whileInView={"visible"}
                         viewport={{ once: true }}
-                        className="text-[7vw] font-climate"
+                        className="text-[10vw] md:text-[7vw] font-climate  "
                     >
                         Contact
                     </motion.p>
@@ -73,7 +73,7 @@ const ContactSection = () => {
                         initial={"hidden"}
                         whileInView={"visible"}
                         viewport={{ once: true }}
-                        className="flex w-full flex-grow flex-col p-2 md:flex-row md:p-8"
+                        className="flex w-full flex-grow flex-col p-2 text-[2.5vw] md:text-[1vw] md:flex-row md:p-8"
                     >
                         <div className="hidden items-center justify-around border-[#F4FFF0] md:flex md:w-1/2 md:flex-col md:border-r-4">
                             <div className="flex flex-grow flex-col items-start justify-around">

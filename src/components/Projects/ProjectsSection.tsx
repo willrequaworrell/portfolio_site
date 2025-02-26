@@ -40,9 +40,9 @@ const ProjectsSection = () => {
     return (
         <section className="font-ibm bg-gradient-to-b from-[#093941] to-[#052b32] overflow-x-clip">
             <div className="flex min-h-screen max-h-screen p-8">
-                <div className="flex flex-grow flex-col gap-x-8 md:flex-row-reverse">
-                    <p className="text-start text-[16vw] text-[#F4FFF0] font-climate md:hidden">Projects</p>
-                    <div className="flex h-full w-full items-center md:h-auto md:w-1/2">
+                <div className="flex flex-grow flex-col justify-center gap-x-8 md:flex-row-reverse">
+                    <p className="text-start text-[10vw] md:text-[16vw] text-[#F4FFF0] font-climate md:hidden">Projects</p>
+                    <div className="flex h-full max-h-1/2 md:max-h-none w-full items-center md:h-auto md:w-1/2">
                         <motion.div  
                             variants={contentVariants}
                             initial={"hidden"}
@@ -61,15 +61,15 @@ const ProjectsSection = () => {
                         initial={"hidden"}
                         whileInView={"visible"}
                         viewport={{ once: true }}
-                        className="flex md:w-1/2"
+                        className="flex md:w-1/2 py-4 md:py-0" 
                     >
                         <div className="flex w-full flex-col items-start text-[#F4FFF0]">
                             <div className="flex items-end h-2/5">
                                 <p className="hidden text-[7vw] md:block font-climate">Projects</p>
                             </div>
                             <motion.div>
-                                <p className="text-[1.5vw] font-bold">{projectsData[currentProject].title}</p>
-                                <p>{projectsData[currentProject].description}</p>
+                                <p className="text-[4vw] md:text-[1.5vw] font-bold">{projectsData[currentProject].title}</p>
+                                <p className="text-[2.5vw] md:text-[1vw]">{projectsData[currentProject].description}</p>
                             </motion.div>
                         </div>
                     </motion.div>

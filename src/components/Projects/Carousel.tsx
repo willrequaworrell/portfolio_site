@@ -43,9 +43,6 @@ const Carousel = ({slides, currentSlide, setCurrentSlide}: CarouselPropsType) =>
 
     const handlePrev = () => {
         setDirection("left")
-        // if (currentSlide === 0) {
-
-        // }
         setCurrentSlide(prev => ((prev - 1) + numSlides) % numSlides)
     }
 
@@ -85,7 +82,7 @@ const Carousel = ({slides, currentSlide, setCurrentSlide}: CarouselPropsType) =>
             </div>
             <div className="flex gap-x-8 items-center text-[3vh] text-[#093941]">
                 <button className="hover:text-slate-600" onClick={handlePrev}><FaCircleLeft /></button>
-                <p className="text-[1vw]">{currentSlide + 1} / {slides.length}</p>
+                <p className="text-[2.5vw] md:text-[1vw]">{currentSlide + 1} / {slides.length}</p>
                 <button className="hover:text-slate-600" onClick={handleNext}><FaCircleRight /></button>
             </div>
            

@@ -16,7 +16,7 @@ const TextArea = ({label, id, name, placeholder, required=true}: TextAreaPropsTy
                 name={name} 
                 placeholder={placeholder} 
                 required={required}
-                className="w-full flex-grow bg-[#F4FFF0] p-2 text-slate-600 resize-none overflow-y-auto rounded-lg" 
+                className="w-full bg-[#F4FFF0] p-2 text-slate-600 resize-none overflow-y-auto rounded-lg" 
             />
         </div>
     )

@@ -61,34 +61,37 @@ const ContactForm = () => {
                     <p className="text-[1vw]">Talk to you soon!</p>
                 </motion.div>
             ) : (
-                <form 
-                    ref={form} 
-                    onSubmit={handleSubmit}
-                    className="flex flex-col items-center justify-center gap-y-8 border-[#F4FFF0] pb-8 w-full md:w-1/2 md:border-l-4 md:p-8 md:pt-8"
-                >
-                        <p className="text-[2vw]">Ask me anything!</p>
-                        <div className="flex w-full items-center justify-between gap-x-4">
-                            <Input
-                                label="Name:"
-                                type="text"
-                                id="name"
-                                name="name"
+                <div className="flex h-full w-full md:w-1/2 items-center justify-center border-[#F4FFF0]  md:border-l-4 pb-8 md:p-8 md:pt-8 ">
+
+                    <form 
+                        ref={form} 
+                        onSubmit={handleSubmit}
+                        className="flex flex-col items-center w-full h-full gap-y-4 md:gap-y-8 "
+                    >
+                            <p className="text-[3vw] md:text-[2vw] font-bold">Ask me anything!</p>
+                            <div className="flex w-full items-center justify-between gap-x-4">
+                                <Input
+                                    label="Name:"
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                />
+                                <Input
+                                    label="Email:"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                />
+                            </div>
+                            <TextArea
+                                label="Message:"
+                                id="message"
+                                name="message"
                             />
-                            <Input
-                                label="Email:"
-                                type="email"
-                                id="email"
-                                name="email"
-                            />
-                        </div>
-                        <TextArea
-                            label="Message:"
-                            id="message"
-                            name="message"
-                        />
-                        <Button isLoading={isSending} isSuccess={sendSuccess}/>
-                        {sendError && <p>Error: message send unsuccessful</p>}
-                </form>
+                            <Button isLoading={isSending} isSuccess={sendSuccess}/>
+                            {sendError && <p>Error: message send unsuccessful</p>}
+                    </form>
+                </div>
             )
             }
         </AnimatePresence>
