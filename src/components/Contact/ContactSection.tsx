@@ -104,14 +104,36 @@ const ContactSection = () => {
                             </div>
                         </div>
                         <ContactForm/>
-                        {/* Mobile contact form */}
-                        <div className="flex flex-col items-center justify-around border-[#F4FFF0] md:hidden md:border-r-4">
-                            <div className="flex flex-wrap gap-x-4">
+                        
+                        <div className="flex flex-col items-start border-t-2 px-4 py-8 gap-y-2 border-[#F4FFF0] md:hidden md:border-r-4">
+                            <SocialLink
+                                text="Linkedin - Will Worrell"
+                                icon={<FaLinkedin />}
+                                href="https://linkedin.com/in/wrw"
+                                openInNewTab
+                            />
+                            <SocialLink
+                                text="Github - willrequaworrell"
+                                icon={<FaGithub />}
+                                href="https://github.com/willrequaworrell"
+                                openInNewTab
+                            />
+                            <SocialLink
+                                text="Email - willrequaworrell@gmail.com"
+                                icon={<MdOutlineMailOutline />}
+                                href="mailto:willrequaworrell@gmail.com"
+                            />
+                            <SocialLink
+                                text="Mobile - (401)-578-9393"
+                                icon={<FaPhoneSquare />}
+                                href="sms:+14015789393"
+                            />
+                            {/* <div className="flex flex-wrap gap-x-4">
                                 <p>LinkedIn - Will Worrell</p>
                                 <p>GitHub - willrequaworrell</p>
                                 <p>Email - willrequaworrell@gmail.com</p>
                                 <p>Phone - (401)-578-9393</p>
-                            </div>
+                            </div> */}
                         </div>
                     </motion.div>
                 </motion.div>
