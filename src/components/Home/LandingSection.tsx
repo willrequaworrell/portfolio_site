@@ -1,4 +1,8 @@
 import { motion } from "framer-motion"
+import SocialLinkBubble from "./SocialLinkBubble";
+import { FaGithub, FaLinkedin, FaPhoneSquare } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
+import SocialLinkBubbleContainer from "./SocialLinkBubbleContainer";
 
 
 const LandingSection = () => {
@@ -50,8 +54,13 @@ const LandingSection = () => {
         <section id="landing" className="">
             <div className="relative min-h-screen max-h-screen bg-cover bg-center" style={{backgroundImage: "url('https://i.ibb.co/cGxhbS4/thierry-meier-PKEPAe-MBOIU-unsplash.jpg')"}}>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#052B30] opacity-100"></div>
-
-                <div className="relative z-10 flex min-h-screen overflow-clip flex-col leading-none">
+                <SocialLinkBubbleContainer>
+                    <SocialLinkBubble icon={<FaLinkedin />} href="https://linkedin.com/in/wrw" openInNewTab/>
+                    <SocialLinkBubble icon={<FaGithub />} href="https://github.com/willrequaworrell" openInNewTab/>
+                    <SocialLinkBubble icon={<MdOutlineMailOutline />} href="mailto:willrequaworrell@gmail.com"/>
+                    <SocialLinkBubble icon={<FaPhoneSquare />} href="sms:+14015789393"/>
+                </SocialLinkBubbleContainer>
+                <div className="relative flex min-h-screen overflow-clip flex-col leading-none">
 
                     <motion.div 
                         variants={titleContainerVariants}

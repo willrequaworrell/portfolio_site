@@ -35,7 +35,6 @@ const Navbar = ({scrollTo, activeSection}: NavbarPropsType) => {
                     <NavbarLink  text="About" section="about" activeSection={activeSection} isActive={activeSection === "about"} scrollTo={scrollTo}/>
                     <NavbarLink  text="Projects" section="projects" activeSection={activeSection} isActive={activeSection === "projects"} scrollTo={scrollTo}/>
                     <NavbarLink  text="Contact" section="contact" activeSection={activeSection} isActive={activeSection === "contact"} scrollTo={scrollTo}/>
-                    {/* <motion.div animate={underlineProperties} className="absolute bottom-0 h-1 w-4 left-0 bg-[#F4FFF0]"/> */}
                 </ul>
             </div>
         </motion.nav>
