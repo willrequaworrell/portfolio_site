@@ -3,6 +3,7 @@ import SocialLinkBubble from "./SocialLinkBubble";
 import { FaGithub, FaLinkedin, FaPhoneSquare } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import SocialLinkBubbleContainer from "./SocialLinkBubbleContainer";
+import TypingAnimationText from "../TypingAnimationText";
 
 
 const LandingSection = () => {
@@ -12,7 +13,7 @@ const LandingSection = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
+                staggerChildren: 0.5,
                 delayChildren: 0.3
             }
         }
@@ -29,7 +30,7 @@ const LandingSection = () => {
                 ease: "easeOut",
                 damping: 10,
                 stiffness: 500,
-                staggerChildren: 0.3,
+                staggerChildren: 0.5,
                 delayChildren: 0.4
             }
         }
@@ -59,6 +60,7 @@ const LandingSection = () => {
                     <SocialLinkBubble icon={<FaGithub />} href="https://github.com/willrequaworrell" openInNewTab/>
                     <SocialLinkBubble icon={<MdOutlineMailOutline />} href="mailto:willrequaworrell@gmail.com"/>
                     <SocialLinkBubble icon={<FaPhoneSquare />} href="sms:+14015789393"/>
+                    
                 </SocialLinkBubbleContainer>
                 <div className="relative flex h-full flex-col leading-none">
 
@@ -73,7 +75,8 @@ const LandingSection = () => {
                             variants={nameVariants}
                         >
                             <motion.p className="text-[max(14vw,40px)] font-climate">WILL</motion.p>
-                            <motion.p variants={sweVariants} className="text-[max(3.75vw,16px)] font-ibm italic"> Software Engineer</motion.p>
+                            {/* <motion.p variants={sweVariants} className="text-[max(3.75vw,16px)] font-ibm italic"> Software Engineer</motion.p> */}
+                            <TypingAnimationText text="Software Engineer" styles=" text-[max(3.75vw,16px)] font-ibm italic"/>
                         </motion.div>
                         <motion.p 
                             variants={nameVariants}
