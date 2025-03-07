@@ -10,12 +10,14 @@ interface SocialLinkBubbleContainerPropsType {
 const SocialLinkBubbleContainer = ({children}: SocialLinkBubbleContainerPropsType) => {
 
     const containerVariants = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0,  },
         visible: {
             opacity: 1,
+            // filter: "blur(0px)",
             transition: {
                 staggerChildren: 0.1,
-                delayChildren: 0.3
+                delayChildren: 0.6
+                
             }
         }
     };

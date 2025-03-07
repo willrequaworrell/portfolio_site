@@ -10,14 +10,14 @@ interface SocialLinkBubblePropsType {
 const SocialLinkBubble = ({icon, href, openInNewTab=false}: SocialLinkBubblePropsType) => {
 
     const childVariants = {
-        hidden: { opacity: 0, x: 10, filter: "blur(5px)" },
+        hidden: { opacity: 0, filter: "blur(5px)" },
         visible: {
             opacity: 1,
-            x: 0,
+            // x: 0,
             filter: "blur(0px)",
             transition: {
                 duration: 0.4,
-                ease: "easeInOut",
+                ease: "easeOut",
                 damping: 10,
                 stiffness: 500
             }
@@ -34,7 +34,7 @@ const SocialLinkBubble = ({icon, href, openInNewTab=false}: SocialLinkBubbleProp
         <motion.a 
             variants={childVariants}
             href={href} {...additionalProps} 
-            className="rounded-full p-2 bg-slate-500/65 text-[max(2vw,16px)] text-[#F4FFF0] border-2 border-slate-600/65 shadow-xl hover:scale-120 hover:border-[#F4FFF0] transition-all"
+            className="rounded-full p-4 bg-slate-500/65 text-[max(2vw,16px)] text-[#F4FFF0]  shadow-xl hover:scale-120 hover:border-[#F4FFF0] transition-all"
         >
             {icon}
         </motion.a>
