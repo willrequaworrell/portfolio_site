@@ -10,10 +10,9 @@ interface SocialLinkBubbleContainerPropsType {
 const SocialLinkBubbleContainer = ({children}: SocialLinkBubbleContainerPropsType) => {
 
     const containerVariants = {
-        hidden: { opacity: 0,  },
+        hidden: { opacity: 0, },
         visible: {
             opacity: 1,
-            // filter: "blur(0px)",
             transition: {
                 staggerChildren: 0.1,
                 delayChildren: 0.6
@@ -27,7 +26,7 @@ const SocialLinkBubbleContainer = ({children}: SocialLinkBubbleContainerPropsTyp
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="absolute z-10 right-0 top-1/2 -translate-y-3/4 flex flex-col justify-center items-center gap-y-6 m-8  "
+            className="hidden absolute z-10 right-0 top-1/2  sm:-translate-y-3/4 sm:flex flex-col justify-center items-center gap-y-6 m-8  "
         >
             {children}
         </motion.div>
