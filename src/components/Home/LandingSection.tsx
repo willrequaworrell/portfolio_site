@@ -51,7 +51,7 @@ const LandingSection = () => {
     }
 
     return (
-        <section id="landing">
+        <section id="landing" className="bg-red-50">
             <div className="relative h-[100dvh] min-h-[100dvh] max-h-[100dvh] bg-cover bg-center" style={{backgroundImage: "url('https://i.ibb.co/cGxhbS4/thierry-meier-PKEPAe-MBOIU-unsplash.jpg')"}}>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#052B30] opacity-100"></div>
                 <SocialLinkBubbleContainer>
