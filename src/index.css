@@ -6,7 +6,3 @@
     --font-ibm: "IBM Plex Mono", serif;
 }
 
-html,
-body {
-  overscroll-behavior: none;
-}
