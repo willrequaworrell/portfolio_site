@@ -36,20 +36,20 @@ const LandingSection = () => {
         }
     };
 
-    const sweVariants = {
-        hidden: { opacity: 0, y: 25, filter: "blur(10px)" },
-        visible: {
-            opacity: 1,
-            y: 0,
-            filter: "blur(0px)",
-            transition: {
-                duration: 0.4,
-                ease: "easeOut",
-                damping: 10,
-                stiffness: 500
-            }
-        }
-    }
+    // const sweVariants = {
+    //     hidden: { opacity: 0, y: 25, filter: "blur(10px)" },
+    //     visible: {
+    //         opacity: 1,
+    //         y: 0,
+    //         filter: "blur(0px)",
+    //         transition: {
+    //             duration: 0.4,
+    //             ease: "easeOut",
+    //             damping: 10,
+    //             stiffness: 500
+    //         }
+    //     }
+    // }
 
     return (
         <section id="landing" >
