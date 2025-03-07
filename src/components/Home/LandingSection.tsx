@@ -52,7 +52,7 @@ const LandingSection = () => {
 
     return (
         <section id="landing" className="">
-            <div className="relative min-h-screen max-h-screen bg-cover bg-center" style={{backgroundImage: "url('https://i.ibb.co/cGxhbS4/thierry-meier-PKEPAe-MBOIU-unsplash.jpg')"}}>
+            <div className="relative min-h-[100dvh] max-h-screen bg-cover bg-center" style={{backgroundImage: "url('https://i.ibb.co/cGxhbS4/thierry-meier-PKEPAe-MBOIU-unsplash.jpg')"}}>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#052B30] opacity-100"></div>
                 <SocialLinkBubbleContainer>
                     <SocialLinkBubble icon={<FaLinkedin />} href="https://linkedin.com/in/wrw" openInNewTab/>
