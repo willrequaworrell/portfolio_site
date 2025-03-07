@@ -50,7 +50,7 @@ const ContactSection = () => {
 
     return (
         <section className="font-ibm bg-gradient-to-b from-[#052b32] to-[#011f24]" >
-            <div className="flex items-center min-h-screen max-h-screen p-8 text-[#F4FFF0]">
+            <div className="flex items-center h-[100dvh] max-h-screen p-8 text-[#F4FFF0]">
                 
                 <motion.div 
                     variants={containerVariants}

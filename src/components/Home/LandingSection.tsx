@@ -52,7 +52,7 @@ const LandingSection = () => {
 
     return (
         <section id="landing" >
-            <div className="relative min-h-[100dvh] max-h-screen bg-cover bg-center" style={{backgroundImage: "url('https://i.ibb.co/cGxhbS4/thierry-meier-PKEPAe-MBOIU-unsplash.jpg')"}}>
+            <div className="relative h-[100dvh] max-h-screen bg-cover bg-center overflow-clip" style={{backgroundImage: "url('https://i.ibb.co/cGxhbS4/thierry-meier-PKEPAe-MBOIU-unsplash.jpg')"}}>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#052B30] opacity-100"></div>
                 <SocialLinkBubbleContainer>
                     <SocialLinkBubble icon={<FaLinkedin />} href="https://linkedin.com/in/wrw" openInNewTab/>
@@ -60,13 +60,13 @@ const LandingSection = () => {
                     <SocialLinkBubble icon={<MdOutlineMailOutline />} href="mailto:willrequaworrell@gmail.com"/>
                     <SocialLinkBubble icon={<FaPhoneSquare />} href="sms:+14015789393"/>
                 </SocialLinkBubbleContainer>
-                <div className="relative flex min-h-screen overflow-clip flex-col leading-none">
+                <div className="relative flex h-full flex-col leading-none">
 
                     <motion.div 
                         variants={titleContainerVariants}
                         initial={"hidden"}
                         animate={"visible"}
-                        className="absolute bottom-1/10 sm:bottom-0 left-0 mb-0 text-[#F4FFF0]"
+                        className="absolute bottom-0 left-0 mb-0 text-[#F4FFF0]"
                     >
                         <motion.div 
                             className="flex items-baseline md:-my-[2vh] lg:-my-[4vh]"
