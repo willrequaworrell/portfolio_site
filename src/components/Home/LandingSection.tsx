@@ -13,7 +13,7 @@ const LandingSection = () => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.5,
+                staggerChildren: 0.3,
                 delayChildren: 0.3
             }
         }
@@ -26,30 +26,14 @@ const LandingSection = () => {
             y: 0,
             filter: "blur(0px)",
             transition: {
-                duration: 0.4,
+                duration: 0.3,
                 ease: "easeOut",
                 damping: 10,
                 stiffness: 500,
-                staggerChildren: 0.5,
-                delayChildren: 0.4
             }
         }
     };
 
-    // const sweVariants = {
-    //     hidden: { opacity: 0, y: 25, filter: "blur(10px)" },
-    //     visible: {
-    //         opacity: 1,
-    //         y: 0,
-    //         filter: "blur(0px)",
-    //         transition: {
-    //             duration: 0.4,
-    //             ease: "easeOut",
-    //             damping: 10,
-    //             stiffness: 500
-    //         }
-    //     }
-    // }
 
     return (
         <section id="landing" >

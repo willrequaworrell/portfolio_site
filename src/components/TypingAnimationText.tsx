@@ -15,7 +15,7 @@ const TypingAnimationText = ({text, styles=""}: TypingAnimationText) => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.075,
-                delayChildren: 1.3
+                delayChildren: 1
             }
         }
     };
@@ -27,8 +27,6 @@ const TypingAnimationText = ({text, styles=""}: TypingAnimationText) => {
             y: 0,
             transition: {
                 duration: 0.1,
-                // damping: 10,
-                // stiffness: 500
             }
         }
     };
