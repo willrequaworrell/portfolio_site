@@ -14,8 +14,9 @@ const SocialLinkBubbleContainer = ({children}: SocialLinkBubbleContainerPropsTyp
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.6
+                delay: 2.5,
+                staggerChildren: 0.15,
+                delayChildren: 3.0
                 
             }
         }

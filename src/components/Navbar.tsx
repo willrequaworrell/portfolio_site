@@ -16,8 +16,9 @@ const Navbar = ({scrollTo, activeSection}: NavbarPropsType) => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.3
+                delay: 2.3,
+                staggerChildren: 0.15,
+                delayChildren: 2.8
             }
         }
     };

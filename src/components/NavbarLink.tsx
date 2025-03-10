@@ -19,6 +19,7 @@ const NavbarLink = ({text, isActive, section, scrollTo, activeSection}: NavbarLi
             y: 0,
             filter: "blur(0px)",
             transition: {
+                // delay: 0.5,
                 duration: 0.4,
                 ease: "easeOut",
                 damping: 10,
