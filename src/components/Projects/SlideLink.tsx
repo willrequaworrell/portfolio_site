@@ -1,3 +1,7 @@
+import { FaGithub,  } from "react-icons/fa";
+import { SlGlobe } from "react-icons/sl";
+
+
 interface SlideLinkPropsType {
     type: "live" | "github"
     href: string
@@ -12,13 +16,10 @@ const SlideLink = ({type, href}: SlideLinkPropsType) => {
             <a 
                 href={href}
                 target="_blank"    
-                className="absolute flex justify-center items-center w-1/2 h-full left-0 bg-slate-600/40 hover:bg-slate-600/50 text-[#F4FFF0] rounded-l-xl cursor-pointer"
+                className="absolute flex justify-center items-center gap-x-2 w-1/2 h-full left-0 text-[1.25vw] bg-slate-600/40 hover:bg-slate-600/50 text-[#F4FFF0] rounded-l-xl cursor-pointer"
             >
-                <p 
-                    className="hover:underline"
-                >
-                    Live Site
-                </p>
+                <SlGlobe/> 
+                <p className=" font-ibm text-[1.25vw] font-bold hover:underline">Live Site </p>
             </a>
         )
 
@@ -27,13 +28,10 @@ const SlideLink = ({type, href}: SlideLinkPropsType) => {
             <a 
                 href={href}
                 target="_blank"    
-                className="absolute flex justify-center items-center w-1/2 h-full right-0 bg-slate-600/40 hover:bg-slate-600/50 text-[#F4FFF0] rounded-r-xl cursor-pointer"
+                className="absolute flex justify-center items-center gap-x-2 w-1/2 h-full right-0 text-[1.25vw] bg-slate-600/40 hover:bg-slate-600/50 text-[#F4FFF0] rounded-r-xl cursor-pointer"
             >
-                <p 
-                    className="hover:underline"
-                >
-                    Github Repo
-                </p>
+                <FaGithub />
+                <p className=" font-ibm  font-bold hover:underline"> Github Repo </p>
             </a>
         )
     }

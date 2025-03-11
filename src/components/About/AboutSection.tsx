@@ -46,7 +46,7 @@ const AboutSection = () => {
                             initial={"hidden"}
                             whileInView={"visible"}
                             viewport={{ once: true }}
-                            className=" w-full h-full flex justify-center items-center bg-[#F4FFF0] md:h-2/3 rounded-xl p-4 md:p-8"
+                            className="relative w-full h-full flex justify-center items-center bg-[#F4FFF0] md:h-2/3 rounded-xl p-4 md:p-8"
                         >
                             {showResume ? (
                                 <iframe
@@ -58,17 +58,18 @@ const AboutSection = () => {
                             ) : (
                                 <div 
                                     onClick={() => setShowResume(true)}
-                                    className="flex justify-start items-center flex-grow font-climate text-[#093941] h-full p-8"
+                                    className="flex justify-start items-center flex-grow font-climate p-8 text-[#093941] h-full "
                                 >
-                                    {/* <div className="flex flex-col justify-center h-full text-[4vw]">
-                                        <p>Click</p>
-                                        <p>for</p>
-                                        <p>Resumé </p>
-                                    </div> */}
-                                    <div className="flex flex-col h-full flex-grow justify-center items-center w-1/3 text-[32vw]">
+                                    <div className=" flex items-center h-full text-[2vw]">
+                                        <p className="leading-none  text-[8vw]">
+                                            Click for Resume
+                                        </p>
+                                        <TbHandClick className="absolute top-1/4 right-[5%] text-[12vw]"/>
+                                    </div>
+                                    {/* <div className="flex flex-col h-full flex-grow justify-center items-center w-1/3 text-[32vw]">
                                         <TbHandClick/>
                                         <p className="text-[2vw] font-climate">Click for Resumé</p>
-                                    </div>
+                                    </div> */}
                                     
                                     
                                 </div>

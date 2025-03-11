@@ -14,7 +14,7 @@ const TypingAnimationText = ({text, styles=""}: TypingAnimationText) => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.075,
+                staggerChildren: 0.06,
                 delayChildren: 1
             }
         }
@@ -26,7 +26,7 @@ const TypingAnimationText = ({text, styles=""}: TypingAnimationText) => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.1,
+                duration: 0.075,
             }
         }
     };
@@ -36,14 +36,16 @@ const TypingAnimationText = ({text, styles=""}: TypingAnimationText) => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className={`flex ${styles}`}
+            className={`flex w-full flex-wrap ${styles}`}
         >
           
             {stringArray.map(ch => (
                 <motion.p
                     variants={childVariants}
-                    className="w-[1ch]"
-                >{ch}</motion.p>
+                    className="w-[1ch] inline-block"
+                >
+                    {ch}
+                </motion.p>
             ))}
             {/* <span className="animate-pulse">|</span> */}
         </motion.div>

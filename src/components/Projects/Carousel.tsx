@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import {  FaCircleLeft, FaCircleRight } from "react-icons/fa6";
+import {  FaSquareCaretLeft, FaSquareCaretRight } from "react-icons/fa6";
 import SlideLink from "./SlideLink";
 
 interface CarouselPropsType {
@@ -58,7 +58,7 @@ const Carousel = ({slides, currentSlide, setCurrentSlide}: CarouselPropsType) =>
             <div 
                 onMouseEnter={() => setShowSlideLinks(true)}
                 onMouseLeave={() => setShowSlideLinks(false)}
-                className="relative flex flex-grow justify-center items-center  rounded-xl overflow-clip"
+                className="relative w-full flex flex-grow justify-center items-center rounded-xl overflow-clip "
             >
                 <AnimatePresence mode="wait" custom={direction}>
                     <motion.img 
@@ -80,10 +80,10 @@ const Carousel = ({slides, currentSlide, setCurrentSlide}: CarouselPropsType) =>
                     </>
                 }
             </div>
-            <div className="flex gap-x-8 items-center text-[3vh] text-[#093941]">
-                <button className="hover:text-slate-600 hover:scale-120 transition-all" onClick={handlePrev}><FaCircleLeft /></button>
+            <div className="flex  gap-x-8 items-center text-[5vh]  text-[#093941]">
+                <button className="hover:text-slate-600 hover:scale-120 transition-all" onClick={handlePrev}><FaSquareCaretLeft /></button>
                 <p className="text-[2.5vw] md:text-[1vw]">{currentSlide + 1} / {slides.length}</p>
-                <button className="hover:text-slate-600 hover:scale-120 transition-all" onClick={handleNext}><FaCircleRight /></button>
+                <button className="hover:text-slate-600 hover:scale-120 transition-all" onClick={handleNext}><FaSquareCaretRight /></button>
             </div>
            
         </div>
