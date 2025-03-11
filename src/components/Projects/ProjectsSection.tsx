@@ -62,7 +62,7 @@ const ProjectsSection = () => {
                             variants={contentVariants}
                             initial={"hidden"}
                             whileInView={"visible"}
-                            viewport={{ once: true }}
+                            // viewport={{ once: true }}
                             className="h-full w-full p-8 rounded-xl bg-[#F4FFF0] md:h-2/3"
                         >
                             <Carousel 

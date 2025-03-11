@@ -45,7 +45,7 @@ const AboutSection = () => {
                             variants={contentVariants}
                             initial={"hidden"}
                             whileInView={"visible"}
-                            viewport={{ once: true }}
+                            // viewport={{ once: true }}
                             className="relative w-full h-full flex justify-center items-center bg-[#F4FFF0] md:h-2/3 rounded-xl p-4 md:p-8"
                         >
                             {showResume ? (
