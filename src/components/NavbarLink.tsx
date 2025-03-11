@@ -32,7 +32,7 @@ const NavbarLink = ({text, isActive, section, scrollTo, activeSection}: NavbarLi
         <motion.li 
             variants={childVariants}
             onClick={() => scrollTo(section)} 
-            className={`text-[3vw] md:text-[1vw] font-ibm px-2  ${isActive ? "border-b-4 border-[#F4FFF0]" :  activeSection === "landing" ? "hover:text-[#F4FFF0]" : "hover:text-slate-600" } transition-colors duration-100`}>
+            className={`cursor-pointer text-[3vw] md:text-[1vw] font-ibm px-2  ${isActive ? "border-b-4 border-[#F4FFF0]" :  activeSection === "landing" ? "hover:text-[#F4FFF0]" : "hover:text-slate-600" } transition-colors duration-100`}>
                 {text}
         </motion.li>
     )
