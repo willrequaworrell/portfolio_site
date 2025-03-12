@@ -38,8 +38,9 @@ const TypingAnimationText = ({text, styles=""}: TypingAnimationText) => {
             className={`flex w-full flex-wrap ${styles}`}
         >
           
-            {stringArray.map(ch => (
+            {stringArray.map((ch, i) => (
                 <motion.p
+                    key={i}
                     variants={childVariants}
                     className="w-[1ch] inline-block"
                 >
