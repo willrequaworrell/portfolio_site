@@ -7,7 +7,6 @@ interface TypingAnimationText {
 
 const TypingAnimationText = ({text, styles=""}: TypingAnimationText) => {
     const stringArray = text.split("")
-    console.log(stringArray)
 
     const containerVariants = {
         hidden: { opacity: 0 },
