@@ -16,6 +16,7 @@ const TextArea = ({label, id, name, placeholder, required=true}: TextAreaPropsTy
                 name={name} 
                 placeholder={placeholder} 
                 required={required}
+                data-lenis-prevent
                 className="w-full min-h-32 bg-[#F4FFF0] p-2 text-slate-600 resize-none overflow-y-auto rounded-lg" 
             />
         </div>
