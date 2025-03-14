@@ -14,6 +14,10 @@ const containerTransition = {
       ease: "easeOut"
     }
 }
+const containerVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
+  };
 
 const ResumeCompanySection = ({companySection}: ResumeCompanySectionPropsType) => {
     const [showDetail, setShowDetail] = useState<boolean>(false)
@@ -23,6 +27,7 @@ const ResumeCompanySection = ({companySection}: ResumeCompanySectionPropsType) =
             <motion.div 
                 layout
                 transition={containerTransition}
+                variants={containerVariants}
                 className="relative flex flex-col bg-[#093941] rounded-xl p-4 gap-y-2"
             >
                 
@@ -44,6 +49,7 @@ const ResumeCompanySection = ({companySection}: ResumeCompanySectionPropsType) =
                         </motion.div>
                     )}
                 </motion.div>
+
                 {companySection.roles.map(role => (
                     <div key={role.roleName}>
                         <div className="flex justify-between w-full px-4">
