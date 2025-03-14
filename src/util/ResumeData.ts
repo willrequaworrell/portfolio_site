@@ -64,6 +64,20 @@ export const companySections: companySectionType[] = [
           ]
         }
       ]
+    },
+    {
+      company: "Euclid Financial Services",
+      roles: [
+        {
+          roleName: "IT Intern",
+          startDate: "Jun '20",
+          endDate: "Aug '20",
+          descriptionBullets: [
+            "Automated data input streams to Salesforce and configured integration with other business platforms.",
+            "Improved lead generation and analytics data through platform synchronization."
+          ]
+        }
+      ]
     }
   ];
   
