@@ -39,9 +39,9 @@ const AboutSection = () => {
                         <div className="w-full flex flex-col items-end justify-center text-[#F4FFF0]">
                             <p className="hidden text-[7vw] font-climate md:block">About</p>
                             <div className="flex flex-col text-[max(2.5vw,11px)] md:text-[1vw] indent-4 sm:indent-8 sm:gap-y-4">
-                                <p >I’m a creative, resourceful developer inspired by turning complex ideas into intuitive, engaging applications. My eye for composition and aesthetics helps me deliver software that not only functions seamlessly but also looks great and is a joy to use. </p>
-                                <p >After graduating from Colgate University with a degree in Computer Science, I've explored roles in Business Analysis and Project Management, but discovered my true passion lies in application development. </p>
-                                <p >Through self-teaching, internships, and freelance work over the past two years, I've honed my skills in modern web development and cloud technologies. Combined with my experience in cross functional collaboration and project management, I bring holistic value to the software development lifecycle.</p>
+                                <p >I’m a creative, resourceful developer inspired by intuitive, engaging applications. My eye for composition and aesthetics helps me deliver software that’s not just functional, but a joy to use.</p>
+                                <p >Since studying Computer Science at Colgate University, I've explored roles in IT Business Analysis and Project Management, but discovered my true passion lies in application development.</p>
+                                <p >Over the past two years, I've honed a breadth of skills in modern web development. Combined with my experience in project management & IT, I bring holistic value to the software development lifecycle.</p>
                             </div>
 
                         </div>

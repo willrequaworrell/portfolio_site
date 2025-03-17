@@ -31,7 +31,7 @@ const ResumeCompanySection = ({companySection}: ResumeCompanySectionPropsType) =
                 className="relative flex flex-col bg-[#093941] rounded-xl p-4 gap-y-2"
             >
                 
-                <motion.div layout  className="flex justify-between font-bold pr-2 mb-2 text-[max(1.25vw,13px)]">
+                <motion.div layout  className="flex justify-between font-bold text-[max(1.25vw,13px)]">
                     <p>{companySection.company}</p> 
                     {showDetail ? (
                         <motion.div layout={false}>
