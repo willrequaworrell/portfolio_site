@@ -52,7 +52,7 @@ const ResumeCompanySection = ({companySection}: ResumeCompanySectionPropsType) =
 
                 {companySection.roles.map(role => (
                     <div key={role.roleName}>
-                        <div className="flex justify-between w-full px-4">
+                        <div className="flex justify-between w-full sm:px-4">
                             <motion.p layout className=" w-1/2 italic text-[max(1vw,12px)]">{role.roleName}</motion.p>
                             <motion.p layout className="italic text-[max(1vw,12px)]">{role.startDate} - {role.endDate}</motion.p>
                         </div>
