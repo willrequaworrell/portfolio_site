@@ -1,5 +1,4 @@
 import { motion } from "framer-motion"
-import { FaFileDownload } from "react-icons/fa"
 import { TiDownload } from "react-icons/ti";
 import { companySections } from "../../util/ResumeData"
 import ResumeCompanySection from "./ResumeCompanySection"
