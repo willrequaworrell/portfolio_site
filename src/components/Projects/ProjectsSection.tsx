@@ -54,7 +54,7 @@ const ProjectsSection = () => {
 
     return (
         <section className="font-ibm bg-gradient-to-b from-[#093941] to-[#052b32] overflow-x-clip">
-            <div className="flex h-[100dvh] max-h-screen p-8">
+            <div className="flex h-[100dvh] max-h-screen p-6 sm:p-8">
                 <div className="flex flex-grow flex-col justify-center gap-x-8 md:flex-row-reverse">
                     <p className="text-start text-[10vw] md:text-[16vw] text-[#F4FFF0] font-climate md:hidden">Projects</p>
                     <div className="flex h-full max-h-1/2 md:max-h-none w-full items-center md:h-auto md:w-1/2">

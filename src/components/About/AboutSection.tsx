@@ -20,7 +20,7 @@ const AboutSection = () => {
 
     return (
         <section id="about" className="font-ibm bg-gradient-to-b from-[#052B30] to-[#093941]">
-            <div className="flex h-[100dvh] max-h-screen p-8">
+            <div className="flex h-[100dvh] max-h-screen p-6 sm:p-8">
                 <div className="flex flex-col h-full justify-center gap-x-8 md:flex-row">
                     
                     <p className="text-end text-[10vw] font-climate text-[#F4FFF0] md:hidden">About</p>
