@@ -63,7 +63,7 @@ const ProjectsSection = () => {
                             initial={"hidden"}
                             whileInView={"visible"}
                             // viewport={{ once: true }}
-                            className="h-full w-full p-8 rounded-xl bg-[#F4FFF0] md:h-2/3"
+                            className="h-full w-full p-4 sm:p-8 rounded-xl bg-[#F4FFF0] md:h-2/3"
                         >
                             <Carousel 
                                 currentSlide={currentProject}
