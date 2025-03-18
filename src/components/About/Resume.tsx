@@ -55,13 +55,12 @@ const Resume = () => {
 				className="flex flex-col py-2 sm:py-8 h-full flex-grow overflow-y-scroll text-[#F4FFF0] gap-y-2 sm:gap-y-4"
 			>
 				{companySections.map(section => (
-					<>
+					<div key={section.company}>
 						<ResumeCompanySection
-							key={section.company}
 							companySection={section}
 						/>
 						
-					</>
+					</div>
 				))}
 			</motion.div>
 
