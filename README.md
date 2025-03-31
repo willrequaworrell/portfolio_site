@@ -1,3 +1,3 @@
-# Will Worrell Portfolio Site
-Built with React, TypeScript, Tailwind CSS, Framer Motion & Lenis
+# Will Worrell Portfolio Site - [willworrell.dev](https://willworrell.dev)
+Built from scratch with React, TypeScript, Tailwind CSS, Framer Motion & Lenis
 
