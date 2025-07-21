@@ -3,7 +3,7 @@ export const projectsData = [
         title: "ER-404", 
         description: "Inspired by legendary music hardware like the Roland TR-909, ER-404 is a modern take on the vintage drum machine. With fully customizable tracks, fx & playback, ER-404 is a gateway to endless rhythmic possibilities--all in the browser.", 
         src: "./er404.png", 
-        alt: "ER-404 app logo", 
+        alt: "ER-404 app snapshot", 
         live: "https://er-404.com", 
         github: "https://github.com/willrequaworrell/ER-404"
     },
@@ -14,6 +14,22 @@ export const projectsData = [
         alt: "klarr app logo", 
         live: "https://klarr.app", 
         github: "https://github.com/willrequaworrell/Klarr_Frontend"
+    },
+    {
+        title: "AI Music Assitant", 
+        description: "A fun, interactive way to DJ your own playlists with a little help from AI. Integrates with your Spotify account and OpenAI to help you select the best tracks to play next by analyzing BPM, key, and harmonic mixing principles. Chat with the assistant in real time to get recommendations, ask about track details, or request transitions—all while the app syncs with Spotify for seamless playback. Built with Next.js, Vercel AI SDK, and the Spotify Web API.", 
+        src: "./music-assistant.png", 
+        alt: "AI Music Assistant snapshot", 
+        live: "", 
+        github: "https://github.com/willrequaworrell/remark-full-stack-challenge"
+    },
+    {
+        title: "Retirement Income Projection Calculator", 
+        description: "Built as a Freelance project for Strategic Retirement Partners, this app was created to replace a years old Excel workbook with something more dynamic, ecovative, and user-friendly. A simple input flow (not shown) and adjustable widgets provide an accessible way to see retirement account potential in real time based on various variables measured. Built with React, TypeScript, Tailwind, and Material UI.", 
+        src: "./ric.png", 
+        alt: "AI Music Assistant snapshot", 
+        live: "", 
+        github: ""
     },
     {
         title: "BriteSpot", 
