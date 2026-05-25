@@ -13,40 +13,54 @@ export interface companySectionType {
 
 export const companySections: companySectionType[] = [
     {
-      company: "L3Harris Technologies",
+      company: "Finderly",
       roles: [
         {
-          roleName: "Project Manager",
-          startDate: "Aug '23",
+          roleName: "Software Engineer (Part Time)",
+          startDate: "Sep '25",
           endDate: "Present",
           descriptionBullets: [
-            "Managed process automation projects serving 45k employees, generating $250k+ in annual savings.",
-            "Led meetings, managed deliverables & served as technical liaison between developers and stakeholders.",
-            "Deployed & monitored automation processes and servers across dev, test and prod environments."
-          ]
-        },
-        {
-          roleName: "IT Business Analyst",
-          startDate: "Nov '21",
-          endDate: "Aug '23",
-          descriptionBullets: [
-            "Owned $1.5 million per year in contract initiations & renewals for software procured from 25+ vendors.",
-            "Managed software utilization audits in ServiceNow to right-size contract renewals for maximum savings.",
-            "Nurtured strategic partnerships with supply chain, procurement and external software vendors."
+            "Built text & live video AI Agent using Vercel AI SDK & LiveKit for users to plan, track and complete DIY projects.",
+            "Refactored monolithic legacy pages into reusable React components & setup Jest test suite across full stack.",
+            "Migrated Node.js backend from JavaScript to TypeScript, enforcing strict typing across shared API contracts."
           ]
         }
       ]
     },
     {
-      company: "GPS Investment Advisors",
+      company: "L3Harris Technologies",
+      roles: [
+        {
+          roleName: "Technical Project Manager (Robotic Process Automation)",
+          startDate: "Aug '23",
+          endDate: "Present",
+          descriptionBullets: [
+            "Developed AI enabled PM tooling to automatically generate documentation, reducing project prep time by 60%.",
+            "Managed deliverables as technical liaison on projects serving 45k employees, generating $300k+ annual savings.",
+            "Deployed & monitored Blue Prism bot processes and application servers across dev, test and prod environments."
+          ]
+        },
+        {
+          roleName: "Business Analyst",
+          startDate: "Nov '21",
+          endDate: "Aug '23",
+          descriptionBullets: [
+            "Owned $1.5 million per year in contract initiations & renewals for software procured from 25+ vendors."
+          ]
+        }
+      ]
+    },
+    {
+      company: "Strategic Retirement Partners",
       roles: [
         {
           roleName: "Software Engineer (Freelance)",
           startDate: "Apr '24",
           endDate: "Oct '24",
           descriptionBullets: [
-            "Designed and built a TypeScript & React application to model dynamic client data for 401k projections.",
-            "Developed elegant form input flow and data visualization dashboard using Material Ul and Tailwind CSS."
+            "Shipped a responsive 401k data projection/visualization web app using TypeScript, React, and Material UI.",
+            "Enabled advisors to deliver accessible, personalized retirement insights that increased client participation 10%.",
+            "Designed accessible form flow and interactive charts built with TypeScript, React, Material UI & Tailwind CSS."
           ]
         }
       ]
@@ -55,12 +69,12 @@ export const companySections: companySectionType[] = [
       company: "501Database",
       roles: [
         {
-          roleName: "Frontend Software Engineer Intern",
+          roleName: "Software Engineer Intern",
           startDate: "Apr '23",
           endDate: "Aug '23",
           descriptionBullets: [
-            "Developed and tested Next.js application for CRM startup utilized by 20+ local non-profit organizations.",
-            "Designed/Implemented multi-page customer intake flow & corresponding admin configuration tools."
+            "Owned customer intake flow & admin tool in Next.js used by 20+ non-profits for 20% faster sign-in experience.",
+            "Integrated the frontend with two RESTful backend microservices, enabling dynamic user-specific form field generation and seamless data submission."
           ]
         }
       ]

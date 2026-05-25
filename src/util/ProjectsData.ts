@@ -1,5 +1,21 @@
 export const projectsData = [
     {
+        title: "HaaS",
+        description: "Sandbox subscription funnel with admin panel for growth focused analytics. Built with Next.js, React, TypeScript, Stripe Sandbox, PostHog, MSW, and TailwindCSS. The funnel runs from landing through checkout, with analytics for plan selection, catalog engagement, upgrade prompts, and checkout progression.",
+        src: "./haas.png",
+        alt: "HaaS houseplant subscription landing page screenshot",
+        live: "https://tryhaas.vercel.app",
+        github: "https://github.com/willrequaworrell/HaaS"
+    },
+    {
+        title: "AFCHub",
+        description: "Arsenal FC fan dashboard with live news, stats, and squad/player performance data. Built with Next.js, TypeScript, TanStack Query, and TailwindCSS, with per-route caching, parallel API fetching, resilient error handling, skeleton loading states, and responsive layouts across breakpoints.",
+        src: "./afchub.png",
+        alt: "AFCHub football dashboard showing match stats and season summary",
+        live: "https://afchub.vercel.app",
+        github: "https://github.com/willrequaworrell/Arsenal-Hub"
+    },
+    {
         title: "ER-404", 
         description: "Inspired by legendary music hardware like the Roland TR-909, ER-404 is a modern take on the vintage drum machine. With fully customizable tracks, fx & playback, ER-404 is a gateway to endless rhythmic possibilities--all in the browser.", 
         src: "./er404.png", 
@@ -31,12 +47,12 @@ export const projectsData = [
         live: "", 
         github: ""
     },
-    {
-        title: "BriteSpot", 
-        description: "A simple, intuitive app designed to help users build a sustainable gratitude practice. By logging just one bright moment from your day, BriteSpot makes it easy to start small and stay consistent. The app tracks your journey toward a more gratitude-filled life, allowing you to view and sort past entries, export your logs, and even visualize patterns in your memories to discover what truly brings you joy. With BriteSpot, cultivating mindfulness and positivity becomes an achievable part of your daily routine.", 
-        src: "./britespot.png", 
-        alt: "BriteSpot app logo", 
-        live: "https://britespot.vercel.app", 
-        github: "https://github.com/willrequaworrell/brite-spot-frontend"
-    }
+    // {
+    //     title: "BriteSpot", 
+    //     description: "A simple, intuitive app designed to help users build a sustainable gratitude practice. By logging just one bright moment from your day, BriteSpot makes it easy to start small and stay consistent. The app tracks your journey toward a more gratitude-filled life, allowing you to view and sort past entries, export your logs, and even visualize patterns in your memories to discover what truly brings you joy. With BriteSpot, cultivating mindfulness and positivity becomes an achievable part of your daily routine.", 
+    //     src: "./britespot.png", 
+    //     alt: "BriteSpot app logo", 
+    //     live: "https://britespot.vercel.app", 
+    //     github: "https://github.com/willrequaworrell/brite-spot-frontend"
+    // }
 ]
